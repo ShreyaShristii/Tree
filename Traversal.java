@@ -36,6 +36,7 @@
 //         }
 //     }
 // }
+import java.util.*;
 public class Traversal {
     public static void main(String args[]) {
 
@@ -81,5 +82,13 @@ class Binarytree {
             newNode.right = buildTree(nodes);
             return newNode;
         }
+    }
+}
+public static void levelot(Node root){
+    Queue<Node> q=new LinkedList<>();
+    q.add(root);
+    q.add(null);
+    while(!q.isEmpty()){
+        Node curr=q.remove();
     }
 }
