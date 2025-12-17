@@ -28,5 +28,28 @@ public class Tree{
     BinaryTree tree=new BinaryTree();
     Node root=tree.Buildtree(nodes);
     System.out.println(root.data);
+    Node ans=LCA(root,4,5);
+    System.out.println(ans.data);
+    }
+    public static  Node LCA(Node root,int p,int q){
+        if (root == null) {
+        return null;
+    }
+
+        else if(root.data==p || root.data==q){
+            return root;
+
+        }
+        Node left=LCA(root.left,p,q);
+        Node right=LCA(root.right,p,q);
+        if(left!=null && right!=null){
+            return root;
+        }
+        else if(right==null){
+            return left;
+        }
+        else{
+            return right;
+        }
     }
 }
