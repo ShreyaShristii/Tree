@@ -30,7 +30,8 @@ public class Tree{
     System.out.println(root.data);
     Node ans=LCA(root,4,5);
     System.out.println(ans.data);
-    }
+    //boolean issame=isSame();
+        }
     public static  Node LCA(Node root,int p,int q){
         if (root == null) {
         return null;
@@ -51,5 +52,11 @@ public class Tree{
         else{
             return right;
         }
+    }
+    boolean isSame(Node p,Node q){
+        if(p==null || q==null) return false;
+        if(p==null && q==null) return true;
+        if(p.data!=q.data) return false;
+        return isSame(p.left,q.left) && isSame(p.right,q.right);
     }
 }
