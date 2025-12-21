@@ -39,7 +39,7 @@
 import java.util.*;
 public class Traversal {
     public static void main(String args[]) {
-
+System.out.println("Hello");
         int[] nodes = {1, 2, 3, -1, -1, 3, -1, -1, 564, -1, 78, -1, -1};
 
         Binarytree.Btree tree = new Binarytree.Btree();
@@ -92,3 +92,4 @@ public static void levelot(Node root){
         Node curr=q.remove();
     }
 }
+//hii
