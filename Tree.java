@@ -59,4 +59,18 @@ public class Tree{
         if(p.data!=q.data) return false;
         return isSame(p.left,q.left) && isSame(p.right,q.right);
     }
+
+}
+class Btree{
+    int[] keys;
+    int t;
+    BtreeNode[] child;
+    int n;
+    boolean leaf;
+    BtreeNode(int t,boolean leaf){
+        this.t=t;
+        thi.leaf=leaf;
+        keys=new int[2*t-1];
+        child=new BtreeNode[2*t];
+    }
 }

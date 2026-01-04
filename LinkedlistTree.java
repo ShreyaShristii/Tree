@@ -27,5 +27,7 @@ public static void main(String[] args){
     Binarytree tree=new Binarytree();
     Node root=tree.build(nodes);
     System.out.println(root.left.data);
+     System.out.println(root.left.data);
+    
 }
 }
