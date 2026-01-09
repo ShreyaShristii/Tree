@@ -81,7 +81,7 @@ public class BST {
 
         System.out.print("\nPostorder : ");
         postorder(root);
-        int  n=Sum(root);
+        int  n=Sum(root );
         System.out.println("\n  Sum of all Nodes:"+n);
     }
 }
