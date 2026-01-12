@@ -44,32 +44,15 @@ public class TreeOperations {
         if(root==null)return 0;
         return Math.max(height(root.left),height(root.right))+1;
     }
-    static void traverse(int[] a,int i){
-        int n=a.length;
-       // int i=0;
-       if(i==n)return;
-       System.out.print(a[i]+" ");
-       traverse(a,i+1);
-    }
-    static int max(int[] a,int max,int i){
-        int n=a.length;
-        if(i==n)return max;
-        if(a[i]>max){
-            max=a[i];
-        }
-        return max(a,max,i+1);
-        //return max;
-
-    }
+ 
     public static void main(String[] args) {
-        int[] values = {10, 5, 15, 3, 7, 12, 18, 1, 4};
+        int[] values = {10, 5, 15, 3, 7, 12, 18, 1, 4,5,23,2,5};
+        int[] a={1,2,3,4,5,6};
         Node root = buildBST(values);
         System.out.println("BST created successfully!");
         System.out.println("Total number of nodes in the tree are: "+countNodes(root));
         System.out.println("Number of leaf Nodes in the tree are: "+leafNodes(root));
         System.out.println("The height of the tree is :"+height(root));
-        System.out.println("Elements of the array are:");
-        traverse(values,0);
-        System.out.println("\nMax of all the elements in the array: "+max(values,0,0));
+        
     }
 }
